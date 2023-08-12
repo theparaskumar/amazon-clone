@@ -6,6 +6,7 @@
   box-sizing: border-box;
   border: border-box;
   text-decoration: none;
+  outline: none;
 }
 
 /***********************************************/
@@ -18,6 +19,10 @@
 
 .flex-col {
   flex-direction: column;
+}
+
+.wrap {
+  flex-wrap: wrap;
 }
 
 .border {
@@ -50,6 +55,10 @@
   justify-content: space-between;
 }
 
+.laptop-hidden {
+  display: none;
+}
+
 /***********************************************/
 /****************** Navbar *********************/
 /***********************************************/
@@ -62,7 +71,7 @@
 }
 
 .navbar > div {
-  padding: 10px 0;
+  /* padding: 10px 0; */
 }
 
 .navbar > .languages {
@@ -73,7 +82,7 @@
 
 .logo {
   height: 50px;
-  height: 100%;
+  /* height: 100%; */
 }
 
 /* box2 */
@@ -105,7 +114,7 @@
   width: 50px;
   height: inherit;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #757575;
 }
 
@@ -114,7 +123,7 @@
   height: inherit;
   font-size: 1rem;
   border: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: #757575;
   padding: 10px;
 }
@@ -213,14 +222,14 @@
 #hero > .message {
   background-color: #f5f6f6;
   color: black;
-  height: 40px;
+  padding: 10px 0;
   width: 90%;
-  font-size: 0.8rem;
   margin-bottom: 25px;
 }
 
 #hero > .message a {
   color: #3f7789;
+  font-size: inherit;
 }
 
 /***********************************************/
@@ -229,16 +238,14 @@
 
 #cards {
   background-color: #bae0b7;
-  min-height: 100px;
   gap: 2rem;
   padding: 1.5rem 0;
 }
 
 #cards > div {
-  width: 22%;
+  width: 300px;
   background-color: white;
-  height: 400px;
-  padding: 1.2rem 0 1rem;
+  padding: 1.2rem;
 }
 
 #cards > div h3 {
@@ -246,17 +253,14 @@
 }
 
 #cards > div a {
-  font-size: 1rem;
-  color: #3f7789;
+  font-size: 0.8rem;
+  color: #3383c2;
 }
 
 #cards .box-img {
   height: 300px;
   background-size: cover;
   margin: 1rem 0;
-}
-.box-content {
-  margin: 0 1rem;
 }
 
 .box1 .box-img {
@@ -364,6 +368,7 @@
 .footer-2 > .footer-2__part1 {
   height: fit-content;
   padding: 3rem 5rem;
+  gap: 1rem;
 }
 
 .footer-2__box {
@@ -409,17 +414,15 @@
 /* footer-3 */
 /*  */
 
-.footer-3 {
+.footer-3,
+.footer-4 {
   background-color: #131a22;
 }
 
-.footer-3 > .subfooter-3 {
+.subfooter-3 {
   gap: 1.5rem;
   padding: 30px 120px;
-}
-
-.footer-3__box {
-  width: 100%;
+  width: 80%;
 }
 
 .footer-3__subbox {
@@ -448,10 +451,79 @@
   gap: 1.5rem;
 }
 
-.copyright > div > a {
-  width: fit-content;
+.footer-3 a:hover,
+.footer-4 a:hover {
+  text-decoration: underline;
 }
 
-.footer-3 a:hover {
-  text-decoration: underline;
+/***********************************************/
+/******************* Media Query ***************/
+/***********************************************/
+
+@media (max-width: 1000px) {
+  /* common */
+
+  .mobile-hidden {
+    display: none;
+  }
+
+  .laptop-hidden {
+    display: flex;
+  }
+
+  /* top navbar */
+
+  .amazon_logo {
+    gap: 3px;
+  }
+
+  .searchbox {
+    width: 100%;
+  }
+
+  .location-mobile,
+  .location-mobile > select {
+    background-color: #232f3e;
+    color: white;
+  }
+
+  .location-mobile > select {
+    outline: none;
+    border: none;
+    font-size: 0.8rem;
+  }
+
+  /* hero */
+  #hero {
+    height: 250px;
+  }
+
+  #hero > .message > p {
+    font-size: 0.8rem;
+  }
+
+  /* cards */
+
+  #cards > div {
+    width: 200px;
+  }
+
+  #cards > div h3 {
+    font-size: 1rem;
+  }
+
+  #cards .box-img {
+    height: 200px;
+  }
+
+  #cards > div {
+    width: 200px;
+    padding: 1rem;
+  }
+
+  /* footer 3 */
+
+  .subfooter-3 {
+    width: 100%;
+  }
 }

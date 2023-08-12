@@ -12,18 +12,26 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <script
+      src="https://kit.fontawesome.com/92f73fe9ec.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <header id="nav">
+    <header id="nav flex flex-col">
       <div class="navbar flex items-center justify-evenly">
         <!-- box1 -->
-        <img
-          src="images/amazon_logo.png"
-          alt="amazon logo"
-          class="logo border"
-        />
+        <div class="flex items-center amazon_logo">
+          <i class="fa-solid fa-bars laptop-hidden"></i>
+          <img
+            src="images/amazon_logo_new.png"
+            alt="amazon logo"
+            class="logo border"
+          />
+        </div>
+
         <!-- box2 -->
-        <div class="flex flex-col border nav-location">
+        <div class="mobile-hidden flex flex-col border nav-location">
           <p class="add-first">Deliver to</p>
           <div class="flex flex">
             <i class="fa-solid fa-location-dot"></i>
@@ -31,7 +39,7 @@
           </div>
         </div>
         <!-- box3 -->
-        <div class="flex searchbox items-center">
+        <div class="mobile-hidden flex searchbox items-center">
           <select>
             <option>All</option>
           </select>
@@ -41,31 +49,62 @@
           </div>
         </div>
         <!-- box4 -->
-        <div class="languages border">
+        <div class="mobile-hidden languages border">
           <select name="" id="">
             <option value="">EN</option>
           </select>
         </div>
         <!-- box5 -->
-        <div class="signin border flex flex-col border">
+        <div class="mobile-hidden signin border flex flex-col">
           <p>Hello, sign in</p>
           <select name="" id="">
             <option value="">Accounts & Lists</option>
           </select>
         </div>
         <!-- box6 -->
-        <div class="orders border">
+        <div class="mobile-hidden orders border">
           <p class="orders1">Returns</p>
           <p class="orders2">& Orders</p>
         </div>
         <!-- box7 -->
+        <!-- laptop-hidden -->
+        <div class="laptop-hidden laptop-signin flex">
+          <p>Hello, sign in</p>
+          <i class="fa-solid fa-people">update</i>
+        </div>
+
         <div class="cart border flex items-center justify-center">
           <i class="fa-solid fa-cart-shopping"></i>
-          <p>Cart</p>
+          <p class="mobile-hidden">Cart</p>
         </div>
       </div>
 
-      <div class="navbar__2 flex items-center">
+      <!-- laptop hidden -->
+      <div class="flex laptop-hidden">
+        <div class="flex searchbox items-center">
+          <select>
+            <option>All</option>
+          </select>
+          <input type="text" placeholder="Search Amazon" />
+          <div class="search-icon flex justify-center items-center">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- laptop hidden -->
+      <div class="laptop-hidden location-mobile">
+        <select>
+          <option>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Deliver to location</span>
+          </option>
+        </select>
+      </div>
+
+      <!-- mobile hidden -->
+
+      <div class="navbar__2 mobile-hidden flex items-center">
         <a href="" class="flex menu items-center border">
           <i class="fa-solid fa-bars"></i>
           <span>All</span>
@@ -79,7 +118,7 @@
     </header>
 
     <div id="hero" class="flex justify-center items-end">
-      <div class="message flex items-center justify-center">
+      <div class="message flex wrap items-center justify-center">
         <p>
           You are on amazon.com. You can also shop on Amazon India for millions
           of products with fast local delivery.
@@ -90,71 +129,53 @@
       </div>
     </div>
 
-    <div id="cards" class="flex justify-center">
-      <div class="box1">
-        <div class="box-content">
-          <h3>Discover Fashion Trends</h3>
-          <div class="box-img"></div>
-          <a href="">See More</a>
-        </div>
+    <div id="cards" class="flex wrap justify-center">
+      <div class="box1 box-content">
+        <h3>Discover Fashion Trends</h3>
+        <div class="box-img"></div>
+        <a href="">See More</a>
       </div>
 
-      <div class="box2">
-        <div class="box-content">
-          <h3>Health & Personal Care</h3>
-          <div class="box-img"></div>
-          <a href="">See More</a>
-        </div>
+      <div class="box2 box-content">
+        <h3>Health & Personal Care</h3>
+        <div class="box-img"></div>
+        <a href="">See More</a>
       </div>
 
-      <div class="box3">
-        <div class="box-content">
-          <h3>Furniture</h3>
-          <div class="box-img"></div>
-          <a href="">See More</a>
-        </div>
+      <div class="box3 box-content items-center ">
+        <h3>Furniture</h3>
+        <div class="box-img"></div>
+        <a href="">See More</a>
       </div>
 
-      <div class="box4">
-        <div class="box-content">
-          <h3>Electronics</h3>
-          <div class="box-img"></div>
-          <a href="">See More</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="cards" class="flex justify-center">
-      <div class="box5">
-        <div class="box-content">
-          <h3>Beauty Picks</h3>
-          <div class="box-img"></div>
-          <a href="">See More</a>
-        </div>
+      <div class="box4 box-content">
+        <h3>Electronics</h3>
+        <div class="box-img"></div>
+        <a href="">See More</a>
       </div>
 
-      <div class="box6">
-        <div class="box-content">
-          <h3>Shop Pet Supplies</h3>
-          <div class="box-img"></div>
-          <a href="">See More</a>
-        </div>
+      <div class="box5 box-content">
+        <h3>Beauty Picks</h3>
+        <div class="box-img"></div>
+        <a href="">See More</a>
       </div>
 
-      <div class="box7">
-        <div class="box-content">
-          <h3>New Arrival in Toys</h3>
-          <div class="box-img"></div>
-          <a href="">See More</a>
-        </div>
+      <div class="box6 box-content">
+        <h3>Shop Pet Supplies</h3>
+        <div class="box-img"></div>
+        <a href="">See More</a>
       </div>
 
-      <div class="box8">
-        <div class="box-content">
-          <h3>Home & Kitchen</h3>
-          <div class="box-img"></div>
-          <a href="">See More</a>
-        </div>
+      <div class="box7 box-content">
+        <h3>New Arrival in Toys</h3>
+        <div class="box-img"></div>
+        <a href="">See More</a>
+      </div>
+
+      <div class="box8 box-content">
+        <h3>Home & Kitchen</h3>
+        <div class="box-img"></div>
+        <a href="">See More</a>
       </div>
     </div>
 
@@ -226,9 +247,11 @@
           </div>
         </div>
       </div>
+
       <div class="footer-ruler"></div>
+
       <div class="footer-2__part2 flex justify-center items-center">
-        <img src="images/amazon_logo.png" alt="amazon logo" class="logo" />
+        <img src="images/amazon_logo_new.png" alt="amazon logo" class="logo" />
         <div class="justify-center">
           <button class="border">
             <i></i>
@@ -248,187 +271,178 @@
         </div>
       </div>
     </div>
-    <div class="footer-3">
-      <div class="subfooter-3 flex flex-col justify-center items-center">
-        <div class="footer-3__box flex justify-evenly">
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Amazon Music</a>
-            <a href="" class="a2">Stream millions of songs</a>
-          </div>
 
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Amazon Advertising</a>
-            <a href="" class="a2">Find, attract, and engage customers</a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">6pm</a>
-            <a href="" class="a2">Score deals on fashion brands</a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">AbeBooks</a>
-            <a href="" class="a2">Books, art & collectibles</a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">ACX</a>
-            <a href="" class="a2">Audiobook Publishing Made Easy</a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Sell on Amazon</a>
-            <a href="" class="a2">Start a Selling Account</a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Amazon Business</a>
-            <a href="" class="a2">Everything For Your Business</a>
-          </div>
+    <div class="footer-3 flex justify-center">
+      <div class="subfooter-3 flex wrap justify-evenly">
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Amazon Music</a>
+          <a href="" class="a2">Stream millions of songs</a>
         </div>
 
-        <div class="footer-3__box flex justify-evenly">
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">AmazonGlobal</a>
-            <a href="" class="a2">Ship Orders Internationally</a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Home Services</a>
-            <a href="" class="a2">Experienced Pros Happiness Guarantee</a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Amazon Ignite</a>
-            <a href="" class="a2"
-              >Sell your original Digital Educational Resources
-            </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Amazon Web Services </a>
-            <a href="" class="a2">Scalable Cloud Computing Services </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Audible </a>
-            <a href="" class="a2"
-              >Listen to Books & Original Audio Performances
-            </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Book Depository </a>
-            <a href="" class="a2">Books With Free Delivery Worldwide </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Box Office Mojo </a>
-            <a href="" class="a2">Find Movie Box Office Data</a>
-          </div>
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Amazon Advertising</a>
+          <a href="" class="a2">Find, attract, and engage customers</a>
         </div>
 
-        <div class="footer-3__box flex justify-evenly">
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">ComiXology </a>
-            <a href="" class="a2">Thousands of Digital Comics </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">DPReview </a>
-            <a href="" class="a2">Digital Photography </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Fabric </a>
-            <a href="" class="a2">Sewing, Quilting & Knitting </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Goodreads </a>
-            <a href="" class="a2">Book reviews & recommendations </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">IMDb </a>
-            <a href="" class="a2">Movies, TV & Celebrities </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">IMDbPro </a>
-            <a href="" class="a2">Get Info Entertainment Professionals Need </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Kindle Direct Publishing </a>
-            <a href="" class="a2">Indie Digital & Print Publishing Made Easy</a>
-          </div>
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">6pm</a>
+          <a href="" class="a2">Score deals on fashion brands</a>
         </div>
 
-        <div class="footer-3__box flex justify-evenly">
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Prime Video Direct </a>
-            <a href="" class="a2">Video Distribution Made Easy </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Shopbop Designer </a>
-            <a href="" class="a2">Fashion Brands </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Woot!</a>
-            <a href="" class="a2">Deals and Shenanigans </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Zappos </a>
-            <a href="" class="a2">Shoes & Clothing </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Ring </a>
-            <a href="" class="a2">Smart Home Security Systems </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">eero WiFi </a>
-            <a href="" class="a2">Stream 4K Video in Every Room </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Blink </a>
-            <a href="" class="a2">Smart Security for Every Home</a>
-          </div>
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">AbeBooks</a>
+          <a href="" class="a2">Books, art & collectibles</a>
         </div>
 
-        <div class="footer-3__box flex justify-evenly">
-          <div class="footer-3__subbox flex flex-col"></div>
-
-          <div class="footer-3__subbox flex flex-col"></div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Neighbors App </a>
-            <a href="" class="a2">Real-Time Crime & Safety Alerts </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">Amazon Subscription Boxes </a>
-            <a href="" class="a2"
-              >Top subscription boxes – right to your door
-            </a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col">
-            <a href="" class="a1">PillPack </a>
-            <a href="" class="a2">Pharmacy Simplified</a>
-          </div>
-
-          <div class="footer-3__subbox flex flex-col"></div>
-
-          <div class="footer-3__subbox flex flex-col"></div>
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">ACX</a>
+          <a href="" class="a2">Audiobook Publishing Made Easy</a>
         </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Sell on Amazon</a>
+          <a href="" class="a2">Start a Selling Account</a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Amazon Business</a>
+          <a href="" class="a2">Everything For Your Business</a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">AmazonGlobal</a>
+          <a href="" class="a2">Ship Orders Internationally</a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Home Services</a>
+          <a href="" class="a2">Experienced Pros Happiness Guarantee</a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Amazon Ignite</a>
+          <a href="" class="a2"
+            >Sell your original Digital Educational Resources
+          </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Amazon Web Services </a>
+          <a href="" class="a2">Scalable Cloud Computing Services </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Audible </a>
+          <a href="" class="a2"
+            >Listen to Books & Original Audio Performances
+          </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Book Depository </a>
+          <a href="" class="a2">Books With Free Delivery Worldwide </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Box Office Mojo </a>
+          <a href="" class="a2">Find Movie Box Office Data</a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">ComiXology </a>
+          <a href="" class="a2">Thousands of Digital Comics </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">DPReview </a>
+          <a href="" class="a2">Digital Photography </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Fabric </a>
+          <a href="" class="a2">Sewing, Quilting & Knitting </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Goodreads </a>
+          <a href="" class="a2">Book reviews & recommendations </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">IMDb </a>
+          <a href="" class="a2">Movies, TV & Celebrities </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">IMDbPro </a>
+          <a href="" class="a2">Get Info Entertainment Professionals Need </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Kindle Direct Publishing </a>
+          <a href="" class="a2">Indie Digital & Print Publishing Made Easy</a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Prime Video Direct </a>
+          <a href="" class="a2">Video Distribution Made Easy </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Shopbop Designer </a>
+          <a href="" class="a2">Fashion Brands </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Woot!</a>
+          <a href="" class="a2">Deals and Shenanigans </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Zappos </a>
+          <a href="" class="a2">Shoes & Clothing </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Ring </a>
+          <a href="" class="a2">Smart Home Security Systems </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">eero WiFi </a>
+          <a href="" class="a2">Stream 4K Video in Every Room </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Blink </a>
+          <a href="" class="a2">Smart Security for Every Home</a>
+        </div>
+
+        <div class="mobile-hidden footer-3__subbox flex flex-col"></div>
+
+        <div class="mobile-hidden footer-3__subbox flex flex-col"></div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Neighbors App </a>
+          <a href="" class="a2">Real-Time Crime & Safety Alerts </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">Amazon Subscription Boxes </a>
+          <a href="" class="a2">Top subscription boxes – right to your door </a>
+        </div>
+
+        <div class="footer-3__subbox flex flex-col">
+          <a href="" class="a1">PillPack </a>
+          <a href="" class="a2">Pharmacy Simplified</a>
+        </div>
+
+        <div class="mobile-hidden footer-3__subbox flex flex-col"></div>
+
+        <div class="mobile-hidden footer-3__subbox flex flex-col"></div>
       </div>
+    </div>
+    <div class="footer-4">
       <div class="copyright flex flex-col items-center">
         <div class="flex">
           <a href="" class="a1">Conditions of Use </a>
